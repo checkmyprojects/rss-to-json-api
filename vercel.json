@@ -8,7 +8,7 @@
     "routes": [
         {
           "src": "/api/rss/(.*)",
-          "dest": "main.js"
+          "dest": "/api/rss"
         }
     ]
   }
