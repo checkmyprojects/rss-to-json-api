@@ -38,30 +38,6 @@ app.get('/api/news', async (req, res) => {
         })
 })
 
-// GET /api/rss?rss=url
-// app.get('/api/rss/', async (req, res) => {
-//     if(req.query.rss){
-//         const rssUrl = req.query.rss.toString()
-//         console.log(`requested url ${rssUrl}`)
-//         await fetchRssFeed(rssUrl)
-//         .then(data => {
-//             res.status(200).json(data);
-//         })
-//         .catch(err => {
-//             res.status(500).json({
-//                 status: 'error',
-//                 message: 'Error, no RSS found'
-//             })
-//         })
-//     }else{
-//         res.status(500).json({
-//             status: 'error',
-//             message: 'Error, it should be GET /api/rss?rss=url'
-//         })
-//     }
-    
-// })
-
 app.get('/api/rss/', async (req, res) => {
     if(req.query){
         if(req.query.rss){
